@@ -1,8 +1,5 @@
 <?php
-define ("servername", "localhost");
-define ("username","root");
-define ("password","");
-define ("dbname","p_reservation");
+require ('db_credentials.php');
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
