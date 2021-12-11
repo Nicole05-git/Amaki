@@ -47,8 +47,8 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- Check Again -->
-      <a href="createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
-      <a href="createAccount/signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
+      <a href="../createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
+      <a href="../createAccount/signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
 
     </div>
   </header><!-- End Header -->
