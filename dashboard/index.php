@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Online Baking Dashboard</title>
+  <title>PanFoods</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -47,8 +47,8 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- Check Again -->
-      <a href="../createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
-      <a href="..\signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
+      <a href="createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
+      <a href="createAccount/signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
 
     </div>
   </header><!-- End Header -->
@@ -228,7 +228,7 @@
         </div>
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15878.687488201718!2d-0.2199232!3d5.7602752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc30b0f51f3b91add!2sAshesi%20University!5e0!3m2!1sen!2sgh!4v1637429277280!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>" frameborder="0" allowfullscreen></iframe>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15878.687488201718!2d-0.2199232!3d5.7602752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc30b0f51f3b91add!2sAshesi%20University!5e0!3m2!1sen!2sgh!4v1637429277280!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <div class="row mt-5">
