@@ -5,6 +5,8 @@
     // Inserting Data Into The Database
     session_start();
 
+    $update= false;
+    $id = 0;
     // RESERV TABLE
     // insert reserv table
     $firstname= null;
@@ -15,9 +17,7 @@
     $thedate= null;
     $thetime= null;
 
-    
-    $update= false;
-    
+     
    
     if(isset($_POST['ssubmit']))
     {
@@ -33,7 +33,7 @@
     
             //email
             $_SESSION['email']= $_POST['email'];
-            $useremail = $_SESSION['email'];
+            $usermail = $_SESSION['email'];
 
             //guests
             $_SESSION['guests']= $_POST['guests'];
@@ -53,7 +53,7 @@
 
                         
             //insert into reserv table in database 
-            $last = "INSERT INTO `reserv`(`fname`, `lname`, `email`, `guests`, `contact`, `resv_date`, `resv_time`) VALUES ('$firstname', '$lastname', '$useremail', '$theguests', '$tellphone', '$thedate', '$thetime')";
+            $last = "INSERT INTO `reserv`(`fname`, `lname`, `email`, `guests`, `contact`, `resv_date`, `resv_time`) VALUES ('$firstname', '$lastname', '$usermail', '$theguests', '$tellphone', '$thedate', '$thetime')";
           
     
             //execute query statement
@@ -82,32 +82,53 @@
         $id = $_GET['delete'];
         $conn -> query("DELETE FROM `reserv` WHERE `reservID` = $id") or die($conn -> error);
 
-        $_SESSION['message'] = "Record has been deleted";
+        $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "danger";
         header("location:../createAccount/reservation.php");
     }
 
+    // Edit
     if(isset($_GET['edit']))
     {
         $id = $_GET['edit'];
 
         $update= true;
-        $result = $conn-> query ("SELECT FROM `reserv` WHERE `reservID` = $id") or die($conn -> error);
+        $result = $conn-> query ("SELECT * FROM `reserv` WHERE `reservID` = $id") or die($conn -> error);
 
-        if(count($result)==1)
+        if($result== true)
         {
             $row = $result -> fetch_array();
             $firstname = $row['fname'];
             $lastname = $row['lname'];
-            $useremail = $row['email'];
+            $usermail = $row['email'];
             $theguests = $row['guests'];
             $tellphone = $row['contact'];
-            $thedate = $row['date'];
-            $thetime = $row['time'];
+            $thedate = $row['resv_date'];
+            $thetime = $row['resv_time'];
         }
 
     }
 
+    // Update
+    if(isset($_POST['update']))
+    {
+        $id = $_POST['reservID'];
+        $firstname = $_POST['fname'];
+        $lastname = $_POST['lname'];
+        $usermail = $_POST['email'];
+        $theguests = $_POST['guests'];
+        $tellphone = $_POST['contact'];
+        $thedate = $_POST['resv_date'];
+        $thetime = $_POST['resv_time'];   
+        
+        $conn -> query("UPDATE reserv SET fname='$firstname', lname='$lastname', email='$usermail', guests='$theguests', contact='$tellphone', resv_date='$thedate', resv_time='$thetime' WHERE reservID=$id") or 
+        die($conn->error); 
+        $_SESSION['message'] = "Record has been updated!";
+        $_SESSION['msg_type'] = "warning";
+
+        header("location:../createAccount/reservation.php");
+
+    }
 
 
     // LOGIN TABLE
@@ -117,15 +138,15 @@
         
     if(isset($_POST['logSubmit']))
     {
-        if(!empty($_POST['user']) && !empty($_POST['pass']))
+        if(!empty($_POST['email']) && !empty($_POST['password']))
         {
             // Email
-            $_SESSION['user']= $_POST['user'];
-            $logname = $_SESSION['user'];
+            $_SESSION['email']= $_POST['email'];
+            $logname = $_SESSION['email'];
     
             // Password
-            $_SESSION['pass']= $_POST['pass'];
-            $logpass = $_SESSION['pass'];
+            $_SESSION['password']= $_POST['password'];
+            $logpass = $_SESSION['password'];
     
             //insert into reserv table in database 
             $run="INSERT INTO `login`(`email`, `passwordd`) VALUES ('$logname', MD5('$logpass'))";
@@ -142,6 +163,41 @@
             }
         }
     }
+
+    // // LOGIN====================
+    // if(isset($_POST['logSubmit']))
+    // {
+    //     $logname=$_POST['email'];
+    //     $logpass= $_POST['password'];
+
+    //     $logn = mysqli_real_escape_string($conn, $logname);
+    //     $logp = mysqli_real_escape_string($conn, $logpass);
+
+    //     $query = mysqli_query($conn, "SELECT * FROM `login` WHERE `email`='$logn' and `passwordd` ='$logp'") or 
+    //     die(mysqli_error($conn));
+
+    //     $row = mysqli_fetch_array($query);
+
+    //     $name = $row['email'];
+    //     $word = $row['passwordd'];
+    //     $id = $row['customerID'];
+
+    //     $counter = mysqli_num_rows($query);    
+    //     if ($counter == 0)
+    //     {
+    //         echo "<script type='text/javascript'>alert('Invalid: Username or Password!')";
+    //         // document.location='signin-up.php' </script>";
+    //     }
+    //     else
+    //     {
+    //         $_SESSION['customerID'] = $id;
+    //         $_SESSION['email'] = $name;
+    //         $_SESSION['password'] = $word;
+
+    //         echo "<script type='text/javascript'>document.location='../dashbaord/index.php'</script>";
+    //     }
+    // }
+
 
     // SIGNUP
     // insert reserv table
