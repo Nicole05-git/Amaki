@@ -68,7 +68,6 @@
             }           
         }
 
-        //  Check again where this goes pleaseeeeeee
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
         header("location:../createAccount/reservation.php");

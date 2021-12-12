@@ -24,7 +24,7 @@
                         <div class="card">
 
                             <!--log in page-->
-                            <form action="crud_operations.php" method="POST" >
+                            <form action="" method="POST" >
                                 <div class="login-box">
                                     <div class="login-snip">
                                         <!--login  -->
