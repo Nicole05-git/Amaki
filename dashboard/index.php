@@ -1,3 +1,8 @@
+<?php
+    require('../createAccount/crud_operations.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -330,7 +335,8 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email">
+              <input type="submit" name="subscribe" value="Subscribe">
             </form>
 
           </div>
