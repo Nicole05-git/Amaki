@@ -1,7 +1,10 @@
 <?php
     require('../createAccount/crud_operations.php');
 
-?>
+//     if (empty($_SESSION['customerID'])):
+//       header('Location:../createAccount/signin-up.php');
+//     endif;
+// ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,8 +55,9 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- Check Again -->
-      <a href="../createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
       <a href="../createAccount/signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
+      <a href="../createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
+      <a href="../dashboard/logout.php" class="get-started-btn scrollto">Logout</a>
 
     </div>
   </header><!-- End Header -->
@@ -122,7 +126,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
               <h4><a href="">Delivery</a></h4>
-              <p>Don't be left out. Come enjoy some delicious meals with friends and family at Accra'a finest restaurant.</p>
+              <p>Don't be left out. Come enjoy some delicious meals with friends and family at Accra's finest restaurant.</p>
             </div>
           </div>
 

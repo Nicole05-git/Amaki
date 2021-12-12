@@ -24,7 +24,7 @@
                         <div class="card">
 
                             <!--log in page-->
-                            <form method="POST" >
+                            <form action="crud_operations.php" method="POST" >
                                 <div class="login-box">
                                     <div class="login-snip">
                                         <!--login  -->
@@ -40,14 +40,14 @@
                                             <div class="login">
                                                 <!--email-->
                                                 <div class="group"> 
-                                                    <label for="user" class="label">email</label> 
-                                                    <input id="user" type="text" class="input" placeholder="email@example.com" name="user"> 
+                                                    <label for="email" class="label">email</label> 
+                                                    <input id="email" type="text" class="input" placeholder="email@example.com" name="email"> 
                                                 </div>
 
                                                 <!--password-->
                                                 <div class="group"> 
-                                                    <label for="pass" class="label">Password</label> 
-                                                    <input id="pass" type="password" class="input" name="pass" placeholder="Enter your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                    <label for="password" class="label">Password</label> 
+                                                    <input id="password" type="password" class="input" name="password" placeholder="Enter your password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                 </div>
 
                                                 <!--agreement-->
@@ -58,7 +58,7 @@
 
                                                 <!--login button-->
                                                 <div class="group"> 
-                                                    <input name="logSubmit" type="submit" class="button" value="Login" > 
+                                                    <button name="logSubmit" type="submit" class="button" value="Login">Login</button> 
                                                 </div>
                                                 <div class="hr"></div>
 

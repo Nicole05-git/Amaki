@@ -116,6 +116,7 @@
 
                     <div class="signup-form">
                         <form action="crud_operations.php" method="POST" class="register-form" id="register-form" >
+                            <input type="hidden" name="reservID" value="<?php echo $id; ?>">
                             <div class="form-row">
 
                                 <div class="form-group">
@@ -144,7 +145,7 @@
                                     <!-- No. of guests attending -->
                                     <div class="form-input">
                                         <label for="guests" class="required">Number of guests</label>
-                                        <input type="number" name="guests" id="guests" class="input" value="<?php echo $guests; ?>" required placeholder="Enter total number of attendants"/>
+                                        <input type="number" name="guests" id="guests" class="input" value="<?php echo $theguests; ?>" required placeholder="Enter total number of attendants"/>
                                     </div>                                                           
 
                                     <!-- Contact details -->
@@ -160,7 +161,7 @@
                                     <!-- Date set -->
                                     <div class="form-input">
                                         <label for="date" class="required">Reservation date</label>
-                                        <input type="type" id="date" name="date" class="form-control" value="<?php echo $thedate; ?>" required placeholder="yyyy-mm-dd">
+                                        <input type="text" id="date" name="date" class="form-control" value="<?php echo $thedate; ?>" required placeholder="yyyy-mm-dd">
                                        
                                     </div>
 
