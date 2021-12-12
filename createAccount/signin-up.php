@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
         <!--Signin-up CSS File -->
-       <link rel="stylesheet" href="createAccount/css/sign_styles.css">
+       <link rel="stylesheet" href="../createAccount/css/sign_styles.css">
 
     </head>
         <title>LOGIN/SIGNUP</title>
@@ -70,7 +70,7 @@
 
 
                                             <!--sign up page-->
-                                            <form>
+                                            <form method="POST">
                                                 <div class="sign-up-form">
 
                                                     <!--Full name-->
@@ -94,19 +94,19 @@
                                                     <!--password-->
                                                     <div class="group"> 
                                                         <label for="pass" class="label">Password</label> 
-                                                        <input name="password" id="pass" type="password" class="input" data-type="password" required placeholder="Create password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                        <input name="pass" id="pass" type="password" class="input" data-type="password" required placeholder="Create password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                         </div>
 
                                                     <!--confirm password-->
                                                     <div class="group"> 
-                                                        <label for="pass" class="label">Confirm Password</label> 
-                                                        <input name="confirmPassword" id="pass" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                        <label for="confirmPassword" class="label">Confirm Password</label> 
+                                                        <input name="confirmPassword" id="confirmPassword" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                     </div>
 
                                                     <!--Age-->
                                                     <div class="group"> 
-                                                        <label for="pass" class="label">Age</label> 
-                                                        <input name="age" id="pass" type="number" class="input" data-type="number" required placeholder="How old are you?"> 
+                                                        <label for="age" class="label">Age</label> 
+                                                        <input name="age" id="age" type="number" class="input" data-type="number" required placeholder="How old are you?"> 
                                                     </div>
 
                                                     <!--signup button-->

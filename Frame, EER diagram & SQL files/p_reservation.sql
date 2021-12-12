@@ -16,18 +16,16 @@ s_email varchar(60) UNIQUE NOT NULL,
 contactt varchar(15) Unique not null,
 s_passwordd varchar (50) UNIQUE,
 age int
--- gender enum('Male', 'Female')
--- dob date,
 );
 
 CREATE TABLE reserv(
-reservID int primary key,
+reservID int auto_increment primary key,
 fname varchar (50),      
 lname varchar(50),
 email varchar(60) not null,
 guests int not null,
 contact varchar(15) not null,
-resv date,
+resv_date date,
 resv_time time
 );
 
@@ -35,6 +33,7 @@ CREATE TABLE subscribe(
 email varchar(60) UNIQUE NOT NULL
 );
 
+INSERT INTO reserv(fname, lname, email, guests, contact, resv_date, resv_time) VALUES('Ama','Koo','koo@gmail.com', '2', '0203402202','2021-12-12', '14:00:00');
 
 
 
