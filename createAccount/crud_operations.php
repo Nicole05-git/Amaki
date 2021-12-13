@@ -1,5 +1,5 @@
 <?php
-    require('../Database_Connection.php');
+    require('Database_Connection.php');
 
     // CREATE OPERATOR
     // Inserting Data Into The Database
