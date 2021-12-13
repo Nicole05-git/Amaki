@@ -1,5 +1,0 @@
-Git push :
-git push --set-upstream https://github.com/Nicole05-git/Final-Project master
-
-to update sql file ==
-20.108.184.91/phpmyadmin/import.php

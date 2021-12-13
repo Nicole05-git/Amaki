@@ -1,4 +1,3 @@
-drop database if exists p_reservation;
 create database p_reservation;
 use  p_reservation;
 
