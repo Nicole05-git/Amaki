@@ -91,7 +91,9 @@
                             class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
-                <?php endwhile; ?>
+                <?php 
+                    endwhile; 
+                ?>
                 </table>
 
             </div>

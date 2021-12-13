@@ -64,6 +64,11 @@
 
                                                 <!--forgot password-->
                                                 <div class="foot"> <a href="#">Forgot Password?</a> </div>
+                                                <br>
+                                                <br>
+
+                                                <!--logout-->
+                                                <div class="foot"> <a href="../index.php">Logout</a> </div>
                                             </div>
                             </form>
 

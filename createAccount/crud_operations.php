@@ -70,7 +70,7 @@
 
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
-        header("location:../reservation.php");
+        header("location: reservation.php");
     }
 
 
@@ -83,7 +83,7 @@
 
         $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "danger";
-        header("location:../reservation.php");
+        header("location: reservation.php");
     }
 
     // Edit
@@ -112,20 +112,20 @@
     if(isset($_POST['update']))
     {
         $id = $_POST['reservID'];
-        $firstname = $_POST['fname'];
-        $lastname = $_POST['lname'];
+        $firstname = $_POST['first_name'];
+        $lastname = $_POST['last_name'];
         $usermail = $_POST['email'];
         $theguests = $_POST['guests'];
-        $tellphone = $_POST['contact'];
-        $thedate = $_POST['resv_date'];
-        $thetime = $_POST['resv_time'];   
+        $tellphone = $_POST['phone_number'];
+        $thedate = $_POST['date'];
+        $thetime = $_POST['time'];   
         
         $conn -> query("UPDATE reserv SET fname='$firstname', lname='$lastname', email='$usermail', guests='$theguests', contact='$tellphone', resv_date='$thedate', resv_time='$thetime' WHERE reservID=$id") or 
         die($conn->error); 
         $_SESSION['message'] = "Record has been updated!";
         $_SESSION['msg_type'] = "warning";
 
-        header("location:../reservation.php");
+        header("location: reservation.php");
 
     }
 
@@ -164,7 +164,7 @@
     }
 
     // SIGNUP
-    // insert reserv table
+    // insert signup table
     $fullname= null;
     $mail= null;
     $number= null;
@@ -192,7 +192,7 @@
             $_SESSION['pass']= $_POST['pass'];
             $word = $_SESSION['pass'];
 
-                //age
+            //age
             $_SESSION['age']= $_POST['age'];
             $age= $_SESSION['age'];
 
