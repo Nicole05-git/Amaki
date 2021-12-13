@@ -1,5 +1,5 @@
 <?php
-    require('../createAccount/Database_Connection.php');
+    require('../Database_Connection.php');
 
     // CREATE OPERATOR
     // Inserting Data Into The Database
@@ -70,7 +70,7 @@
 
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
-        header("location:../createAccount/reservation.php");
+        header("location:../reservation.php");
     }
 
 
@@ -83,7 +83,7 @@
 
         $_SESSION['message'] = "Record has been deleted!";
         $_SESSION['msg_type'] = "danger";
-        header("location:../createAccount/reservation.php");
+        header("location:../reservation.php");
     }
 
     // Edit
@@ -125,7 +125,7 @@
         $_SESSION['message'] = "Record has been updated!";
         $_SESSION['msg_type'] = "warning";
 
-        header("location:../createAccount/reservation.php");
+        header("location:../reservation.php");
 
     }
 
@@ -162,41 +162,6 @@
             }
         }
     }
-
-    // // LOGIN====================
-    // if(isset($_POST['logSubmit']))
-    // {
-    //     $logname=$_POST['email'];
-    //     $logpass= $_POST['password'];
-
-    //     $logn = mysqli_real_escape_string($conn, $logname);
-    //     $logp = mysqli_real_escape_string($conn, $logpass);
-
-    //     $query = mysqli_query($conn, "SELECT * FROM `login` WHERE `email`='$logn' and `passwordd` ='$logp'") or 
-    //     die(mysqli_error($conn));
-
-    //     $row = mysqli_fetch_array($query);
-
-    //     $name = $row['email'];
-    //     $word = $row['passwordd'];
-    //     $id = $row['customerID'];
-
-    //     $counter = mysqli_num_rows($query);    
-    //     if ($counter == 0)
-    //     {
-    //         echo "<script type='text/javascript'>alert('Invalid: Username or Password!')";
-    //         // document.location='signin-up.php' </script>";
-    //     }
-    //     else
-    //     {
-    //         $_SESSION['customerID'] = $id;
-    //         $_SESSION['email'] = $name;
-    //         $_SESSION['password'] = $word;
-
-    //         echo "<script type='text/javascript'>document.location='../dashbaord/index.php'</script>";
-    //     }
-    // }
-
 
     // SIGNUP
     // insert reserv table
@@ -277,70 +242,6 @@
             }
         }
     }
-
-    
-
-
-
-
-    
-
-    // // Check existence of id parameter before processing further
-    // if(isset($_POST["reservID"]) && !empty(trim($_POST["reservID"])))
-    // {
-                
-    //     // Prepare a select statement
-    //     $sql = "SELECT * FROM reserv WHERE reservID = ?";
-        
-    //     if($stmt = $mysqli->prepare($sql))
-    //     {
-    //         // Bind variables to the prepared statement as parameters
-    //         $stmt->bind_param("i", $param_id);
-            
-    //         // Set parameters
-    //         $param_id = trim($_POST["reservID"]);
-            
-    //         // Attempt to execute the prepared statement
-    //         if($stmt->execute())
-    //         {
-    //             $result = $stmt->get_result();
-                
-    //             if($result->num_rows > 0)
-    //             {
-    //                 /* Fetch result row as an associative array. Since the result set
-    //                 contains only one row, we don't need to use while loop */
-    //                 $row = $result->fetch_array(MYSQLI_ASSOC);
-                    
-    //                 // Retrieve individual field value
-    //                 $firstname = $row["first_name"];
-    //                 $lastname = $row["last_name"];
-    //                 $email = $row["email"];
-    //                 $tellphone = $row["phone_number"];
-    //                 $thedate = $row["date"];
-    //                 $thetime = $row["time"];
-                    
-    //             } 
-    //             else{
-    //                 // URL doesn't contain valid id parameter. Redirect to error page
-    //                 header("location:../dashboard/error.php");
-    //                 exit();
-    //             }
-                
-    //         } else{
-    //             echo "Oops! Something went wrong. Please try again later.";
-    //         }
-    //     }
-        
-    //     // Close statement
-    //     $stmt->close();
-        
-    // } 
-    // else{
-    //     // URL doesn't contain id parameter. Redirect to error page
-    //     header("location:../dashboard/error.php");
-    //     exit();
-    // }
-
 
 
 ?>

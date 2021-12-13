@@ -58,8 +58,7 @@
       <!-- Check Again -->
       <a href="../createAccount/signin-up.php" class="get-started-btn scrollto">Login/Signup</a>
       <a href="../createAccount/reservation.php" class="get-started-btn scrollto">Reservation</a>
-      <a href="../dashboard/logout.php" class="get-started-btn scrollto">Logout</a>
-
+      
     </div>
   </header><!-- End Header -->
 
