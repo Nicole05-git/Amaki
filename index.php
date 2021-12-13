@@ -5,7 +5,8 @@
 //     if (empty($_SESSION['customerID'])):
 //       header('Location:../createAccount/signin-up.php');
 //     endif;
-// ?>
+// 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
