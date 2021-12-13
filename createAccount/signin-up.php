@@ -112,14 +112,14 @@
 
                                                     <!--password-->
                                                     <div class="group"> 
-                                                        <label for="pass" class="label">Password</label> 
-                                                        <input name="pass" id="pass" type="password" class="input" data-type="password" required placeholder="Create password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                        <label for="pswd1" class="label">Password</label> 
+                                                        <input name="pswd1" id="pswd1" type="password" class="input" data-type="password" required placeholder="Create password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                         </div>
 
                                                     <!--confirm password-->
                                                     <div class="group"> 
                                                         <label for="confirmPassword" class="label">Confirm Password</label> 
-                                                        <input name="pswd2" id="confirmPassword" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                        <input name="confirmPassword" id="confirmPassword" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                     </div>
 
                                                     <!--Age-->
