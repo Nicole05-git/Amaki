@@ -1,4 +1,4 @@
-dashboard/<?php
+<?php
   // hello world
     require('../createAccount/crud_operations.php');
 
