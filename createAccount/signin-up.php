@@ -18,6 +18,20 @@
 
     </head>
         <title>LOGIN/SIGNUP</title>
+        <script>  
+            function matchPassword() 
+            {  
+                var pw1 = document.getElementById("pswd1");  
+                var pw2 = document.getElementById("pswd2");  
+                if(pw1 != pw2)  
+                {   
+                    alert("Passwords did not match");  
+                } 
+                else {  
+                    alert("Password created successfully");  
+                }  
+            }  
+            </script> 
             <body>                        
                 <div class="row">
                     <div class="col-md-6 mx-auto p-0">
@@ -68,7 +82,7 @@
                                                 <br>
 
                                                 <!--logout-->
-                                                <div class="foot"> <a href="./index.php">Logout</a> </div>
+                                                <div class="foot"> <a href="/php_files/Amaki/index.php">Logout</a> </div>
                                             </div>
                             </form>
 
@@ -105,7 +119,7 @@
                                                     <!--confirm password-->
                                                     <div class="group"> 
                                                         <label for="confirmPassword" class="label">Confirm Password</label> 
-                                                        <input name="confirmPassword" id="confirmPassword" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+                                                        <input name="pswd2" id="confirmPassword" type="password" class="input" data-type="password" required placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
                                                     </div>
 
                                                     <!--Age-->

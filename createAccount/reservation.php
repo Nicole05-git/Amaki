@@ -188,7 +188,7 @@
                                         <button type="submit" value="Reset" class="submit" id="reset" name="reset">Reset</button>
                                         <br>
                                         <br>
-                                        <div class="foot"> <a href="../Amaki/index.php">Exit page</a> </div>                                  
+                                        <div class="foot"> <a href="/php_files/Amaki/index.php">Exit page</a> </div>                                  
                                     </div>
                                 </div>  
                             </div>                                                                                                                                                                                                                                                            

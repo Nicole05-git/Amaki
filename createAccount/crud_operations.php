@@ -174,7 +174,7 @@
        
     if(isset($_POST['sign_up']))
     {
-        if(!empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['pass']) && !empty($_POST['age']))
+        if(!empty($_POST['full_name']) && !empty($_POST['email']) && !empty($_POST['phone']) && !empty($_POST['pswd1']) && !empty($_POST['age']))
         {
             // Fullname
             $_SESSION['full_name']= $_POST['full_name'];
@@ -189,8 +189,8 @@
             $number = $_SESSION['phone'];   
             
             //password
-            $_SESSION['pass']= $_POST['pass'];
-            $word = $_SESSION['pass'];
+            $_SESSION['pswd1']= $_POST['pswd1'];
+            $word = $_SESSION['pswd1'];
 
             //age
             $_SESSION['age']= $_POST['age'];
@@ -215,7 +215,7 @@
 
 
     // Subscribe
-    // insert reserv table
+    // insert subscribe table
     $sub= null;
            
     if(isset($_POST['subscribe']))
