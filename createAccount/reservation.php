@@ -53,7 +53,11 @@
         <div class="container">
             <?php            
                 // require('Database_Connection.php');
-                $result = $conn -> query("SELECT * FROM reserv") or die (mysqli -> error);
+                // $result = $conn -> query("SELECT * FROM reserv") or 
+                // die ($conn -> error);
+                $query= "SELECT * FROM reserv;";
+                $result= $conn-> query($query)or 
+                die ($conn -> error);
                 // pre_r($result);    
                 // pre_r($result -> fetch_assoc());
             ?> 
