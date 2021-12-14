@@ -82,7 +82,7 @@
                                                 <br>
 
                                                 <!--logout-->
-                                                <div class="foot"> <a href="../index.php">Logout</a> </div>
+                                                <div class="foot"> <a href="../index.php">Continue</a> </div>
                                             </div>
                             </form>
 
